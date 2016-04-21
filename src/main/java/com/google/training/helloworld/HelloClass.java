@@ -21,8 +21,9 @@ public class HelloClass {
 		}
 	}
 
-	public HelloClass(String name, String period) {
-		this.message = "Hello " + name + " " + period + "!";
+	public HelloClass(String login, String password) {
+		//TODO VLAD ACHTUNG ACHTUNG ACHTUNG ACHTUNG login
+		this.message = "Hello " + login + " " + password+ "!";
 	}
 
 	public HelloClass(int i) {
@@ -31,6 +32,20 @@ public class HelloClass {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public HelloClass(String anime, int rating) {
+		//TODO VLAD ACHTUNG ACHTUNG ACHTUNG ACHTUNG add anime
+		this.message = anime;
+	}
+
+	public HelloClass(String[] values) {
+		//TODO VLAD ACHTUNG ACHTUNG ACHTUNG ACHTUNG register
+		this.message = values[0];
+	}
+
+	public HelloClass(String login, boolean b) {
+		//TODO VLAD ACHTUNG ACHTUNG ACHTUNG ACHTUNG recommend
 	}
 
 	// HTTP GET request

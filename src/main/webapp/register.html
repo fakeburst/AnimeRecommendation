@@ -1,6 +1,8 @@
 <html>
     <head>
         <title>AnimeRecommendation</title>
+        <script src="hello.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=init"></script>
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="metro/css/metro.min.css">
         <link rel="stylesheet" href="metro/css/metro-icons.min.css">
@@ -12,8 +14,8 @@
             <div class="row borders-main color-register"></div>
             <div class="row cells12">
                 <div class="cell colspan4"></div>
-                <div class="cell colspan4 register">
-                    <form>
+                <div class="cell colspan4 register" id="center">
+                    <div>
                         <h1 class="text-light">Register</h1>
                         <hr class="thin color-register"/>
                         <br />
@@ -38,10 +40,8 @@
                         </div>
                         <br />
                         <br />
-                        <div class="form-actions">
-                            <button type="submit" class="button primary color-register">Register</button>
-                        </div>
-                    </form>
+                        <button class="button success color-register" onclick="register()">Register</button>
+                    </div>
                 </div>
                 <div class="cell colspan4"></div>
             </div>

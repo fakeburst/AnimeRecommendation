@@ -13,8 +13,10 @@ function proceed(id)
                 {
                     prev[++level] = current;
                     current = current.children[i];
-                    if(current.anime!=null)
-                        getAnime();
+                    if(current.anime!=null){
+                        var string = text[current.anime-1].replace(new RegExp(' ',''),'+');
+                        getAnime(string);
+                    }
                     else{
                         if(current.change!=null)
                             current = current.change;

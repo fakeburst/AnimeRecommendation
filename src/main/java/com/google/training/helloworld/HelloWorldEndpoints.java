@@ -44,11 +44,40 @@ public class HelloWorldEndpoints {
     	return new HelloClass(anime);
     }
     
-    @ApiMethod(name="greetByPeriod", path="greetByPeriod", httpMethod=HttpMethod.GET)
+    /*@ApiMethod(name="greetByPeriod", path="greetByPeriod", httpMethod=HttpMethod.GET)
     
     public HelloClass greetByPeriod(@Named("name") String name, @Named("period") String period)
     {
     	 return new HelloClass(name,period);
+    }*/
+    
+    @ApiMethod(name = "addAnime", path = "addAnime",
+            httpMethod = HttpMethod.GET)
+    public HelloClass addAnime(@Named("anime") String anime, @Named("rating") int rating)
+    {
+    	return new HelloClass(anime, rating);
     }
     
+    @ApiMethod(name = "register", path = "register",
+            httpMethod = HttpMethod.GET)
+    public HelloClass register(@Named("values") String[] values)
+    {
+    	return new HelloClass(values);
+    }
+    
+    @ApiMethod(name = "login", path = "login",
+            httpMethod = HttpMethod.GET)
+    public HelloClass login(@Named("login") String login, @Named("password") String pass)
+    {
+    	//return user login
+    	return new HelloClass(login, pass);
+    }
+    
+    @ApiMethod(name = "recommend", path = "recommend",
+            httpMethod = HttpMethod.GET)
+    public HelloClass login(@Named("user") String login)
+    {
+    	//return the array of titles
+    	return new HelloClass(login, true);
+    }
 }
